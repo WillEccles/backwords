@@ -4,7 +4,7 @@ function update() {
 	asciiSum(str);
 	hex(str);
 	binary(str);
-	octaal(str);
+	octal(str);
 }
 function reverse(input){
 	var outstr = "";
@@ -41,7 +41,7 @@ function binary(input) {
 
 }
 
-function octaal(input){
+function octal(input){
 	var arr = [];
 	var outstr = "";
 	for (let i = 0, l = input.length; i < l; i++) {
