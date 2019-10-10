@@ -3,7 +3,11 @@ function update() {
 	reverse(str);
 	asciiSum(str);
 	hex(str);
-	palindrome(str);
+
+	binary(str);
+	octal(str);
+  palindrome(str);
+
 }
 
 function reverse(input) {
@@ -25,10 +29,30 @@ function hex(input) {
 	var arr = [];
 	var outstr = "";
 	for (let i = 0, l = input.length; i < l; i++) {
-		var hex = Number(input.charCodeAt(i)).toString(16);
+		var hex = Number(input.charCodeAt(i)).toString(16) + " ";
 		arr.push(hex);
 	}
 	document.getElementById("textoutHex").value = arr.join('');
+
+}
+
+function binary(input) {
+	var output = "";
+	for (var i = 0; i < input.length; i++) {
+      output += input[i].charCodeAt(0).toString(2) + " ";
+  }
+  document.getElementById("textoutBin").value = output;
+
+}
+
+function octal(input){
+	var arr = [];
+	var outstr = "";
+	for (let i = 0, l = input.length; i < l; i++) {
+		var hex = Number(input.charCodeAt(i)).toString(8) + " ";
+		arr.push(hex);
+	}
+	document.getElementById("textoutOct").value = arr.join('');
 }
 
 function palindrome(str) {
